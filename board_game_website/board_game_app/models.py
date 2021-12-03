@@ -11,4 +11,3 @@ class BoardGame(models.Model):
         """Returns a strin representation of model."""
         return self.text #return the text as a string
 
-        
