@@ -1,0 +1,22 @@
+{% extends 'board_game_app/base.html' %}
+
+{% block content %}
+
+<p>Board game: {{ boardgame }}</p>
+
+<p>Available games:</p>
+
+<ul>
+{% for availablegame in availablegames %}
+<li>
+<p>{{ availablegame.date_added|date:'M d, Y H:i' }}</p>
+<p>{{ availablegame.text|linebreaks }}</p>
+</li>
+
+{% empty %}
+
+<li>There are no available games.</li>
+{% endfor %}
+</ul>
+
+{% endblock content %}
