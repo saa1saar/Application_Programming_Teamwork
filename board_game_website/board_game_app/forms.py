@@ -1,10 +1,11 @@
 from django import forms
 
-from .models import Boardgame
+from .models import BoardGame
 
- class BoardGameForm(forms.ModelForm):
-       class Meta:
-            model = Topic
+class BoardGameForm(forms.ModelForm):
+      
+      class Meta:
+            model = BoardGame
             fields = ['text']
             labels = {'text': ''} 
 
