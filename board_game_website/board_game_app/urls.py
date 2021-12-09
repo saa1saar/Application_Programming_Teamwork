@@ -8,9 +8,9 @@ urlpatterns = [
     #Homepage
     path('', views.index, name='index'),
     #Page that shows all the board games
-    path('BoardGames/', views.BoardGames, name='Boardgames'),
+    path('BoardGames/', views.BoardGames, name='BoardGames'),
     #Detail page for a single board game 
-    path('BoardGames/<int:boardgame_id>/', views.boardgame, name='boardgame'),
+    #path('BoardGame/<int:boardgame_id>/', views.boardgame, name='BoardGame'),
     #Page for adding a new board game
-    path('new_boardgame/', views.new_boardgame, name='new_boardgame'),
+    #path('new_boardgame/', views.new_boardgame, name='new_boardgame'),
 ]
