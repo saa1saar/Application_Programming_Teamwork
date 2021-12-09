@@ -11,10 +11,10 @@ class BoardGame(models.Model):
         """Returns a strin representation of model."""
         return self.text #return the text as a string
 
-class AvaiableGames(models.Model):
+class AvailableGames(models.Model):
     """Currently avaiable board games."""
     boardgame = models.ForeignKey(BoardGame, on_delete=models.CASCADE)
-
+    
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
