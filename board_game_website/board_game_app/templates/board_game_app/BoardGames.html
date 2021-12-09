@@ -1,0 +1,16 @@
+{% extends "board_game_app/base.html" %}
+
+{% block content %}
+
+<p>Board Games</p>
+
+
+<ul>
+    {% for BoardGame in BoardGames %}
+    <li>{{ BoardGame }}</li>
+    {% empty %}
+    <li>No board games have been added yet.</li>
+    {% endfor %}
+</ul>
+    
+{% endblock content %}
