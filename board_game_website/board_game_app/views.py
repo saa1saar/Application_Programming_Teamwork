@@ -37,6 +37,6 @@ def new_boardgame(request): #Page523
 
     # Display a blank or invalid form.
     context = {'form': form}
-    returrn render(request,'board_game_app/new_boardgame.html', context)
+    return render(request,'board_game_app/new_boardgame.html', context)
 
 # Create your views here.
