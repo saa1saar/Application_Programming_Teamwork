@@ -1,11 +1,11 @@
 from django.shortcuts import render
 
-from .models import Topic
+from .models import BoardGame
 
-def index(request):
-    #Topics
-    topics = Topic.objects.order_by('date_added')
-    context = {'topics': topics}
+def BoarGames(request):
+    #BoardGames
+    BoardGames = BoardGame.objects.order_by('date_added')
+    context = {'BoardGames': BoardGames}
     #Home page
-    return render(request, 'board_game_app/index.html')
+    return render(request, 'board_game_app/BoardGame.html', context)
 # Create your views here.
