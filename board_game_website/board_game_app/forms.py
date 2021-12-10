@@ -10,7 +10,7 @@ class BoardGameForm(forms.ModelForm):
             fields = ['text']
             labels = {'text': ''} 
 
-class ReviewGame(forms.ModelForm):
+class ReviewGameForm(forms.ModelForm):
     class Meta:
         model = ReviewGame
         fields = ['text']
