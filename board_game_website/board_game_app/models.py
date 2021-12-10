@@ -11,14 +11,14 @@ class BoardGame(models.Model):
         """Returns a strin representation of model."""
         return self.text #return the text as a string
 
-class AvailableGames(models.Model):
+class ReviewGame(models.Model):
     """Currently avaiable board games."""
     boardgame = models.ForeignKey(BoardGame, on_delete=models.CASCADE)
-
+    text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = 'available games'
+        verbose_name_plural = 'review games'
     
     def __str__(self):
         return f"{self.text[:50]}..."
