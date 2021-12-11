@@ -5,9 +5,6 @@
 <p>Board game: {{ boardgame }}</p>
 
 <p>Review game:</p>
-<p>
-    <a href="{% url 'board_game_app:new_review' boardgame.id %}">Add new review</a>
-</p>
 
 <ul>
 {% for reviewgame in reviewgames %}
