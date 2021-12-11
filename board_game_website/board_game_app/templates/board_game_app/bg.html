@@ -1,0 +1,17 @@
+{% extends 'board_game_app/base.html' %}
+{% block content %}
+
+<p>Board Games: {{ bg }}</p> <!--- Shows the titles on the page and the bg should show the board games--->
+<p>Entries:</p>
+
+<ul>
+{% for entry in entries %}
+<li>
+<p>{{ entry.date_added|date:'M d, Y H:i' }}</p>
+<p>{{ entry.text|linebreaks }}</p>
+</li>
+{% empty %}
+<li>There are no entries for this board game yet.</li>
+{% endfor %}
+</ul>
+{% endblock content %}
