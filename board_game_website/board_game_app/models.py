@@ -14,11 +14,11 @@ class BoardGame(models.Model):
 class AvailableGames(models.Model):
     """Currently avaiable board games."""
     boardgame = models.ForeignKey(BoardGame, on_delete=models.CASCADE)
-
+    
     date_added = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = 'available games'
+        verbose_name_plural = 'avaible games'
     
     def __str__(self):
         return f"{self.text[:50]}..."
