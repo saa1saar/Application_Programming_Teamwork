@@ -6,7 +6,7 @@
  <form action="{% url 'board_game_app:new_boardgame' %}" method='post'>
    {% csrf_token %}
    {{ form.as_p }}
-   <button name="submit">Add Board games</button>
+   <button name="submit">Add Board game</button>
  </form>
 
 {% endblock content %}
