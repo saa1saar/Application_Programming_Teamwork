@@ -4,18 +4,18 @@
 
 <p>Board game: {{ boardgame }}</p>
 
-<p>Review game:</p>
+<p>Available games:</p>
 
 <ul>
-{% for reviewgame in reviewgames %}
+{% for availablegame in availablegames %}
 <li>
-<p>{{ reviewgame.date_added|date:'M d, Y H:i' }}</p>
-<p>{{ reviewgame.text|linebreaks }}</p>
+<p>{{ availablegame.date_added|date:'M d, Y H:i' }}</p>
+<p>{{ availablegame.text|linebreaks }}</p>
 </li>
 
 {% empty %}
 
-<li>There are no review games.</li>
+<li>There are no available games.</li>
 {% endfor %}
 </ul>
 
