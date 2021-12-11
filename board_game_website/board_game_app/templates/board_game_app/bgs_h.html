@@ -7,6 +7,10 @@
 
 <ul>
     {% for bg in bgs_h %}
+      <li>
+        <a href="{% url 'board_game_app:bg' bg.id %}">{{ bg }}</a>
+      </li>
+
       <li>{{ bg }}</li>
     {% empty %}
       <li>No board games have been added yet.</li>
