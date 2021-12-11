@@ -1,20 +1,21 @@
 from django.shortcuts import render
 
-<<<<<<< HEAD
-from .models import Topic
+from .models import BG
 
-<<<<<<< HEAD
-=======
->>>>>>> parent of 0c7026b (views.py Topics)
 def index(request):
     #Home page
     return render(request, 'board_game_app/index.html')
-=======
-def BoarGames(request):
+
+def bgs_h(request):
     #BoardGames
-    BoardGames = BoardGame.objects.order_by('date_added')
-    context = {'BoardGames': BoardGames}
-    #Home page
-    return render(request, 'board_game_app/BoardGame.html', context)
->>>>>>> parent of 5c4dd30 (views.py Boardgame)
+    bgs_h = BG.objects.order_by('date_added')
+    context = {'bgs_h': bgs_h}
+    return render(request, 'board_game_app/bgs_h.html', context)
+
+def bg(request, bg_id):
+    #show a single bg and all its entries
+    bg = BG.objects.get(id=bg_id)
+    entries = bg.entry_set.order_by('-date_added')
+    context = {'bg': bg, 'entries': entries}
+    return render(request, 'board_game_app/bg.html', context)
 # Create your views here.
