@@ -1,7 +1,6 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import render
 
 from .models import BoardGame
-from .forms import BoardGameForm
 
 def index(request):
     return render(request, 'board_game_app/index.html')
