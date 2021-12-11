@@ -2,11 +2,6 @@ from django.shortcuts import render
 
 from .models import BoardGame
 
-def index(request):
-    """The home page for board_game_website."""
-    return render(request, 'board_game_app/index.html')
-
-
 def BoardGames(request):
     #BoardGames
     BoardGames = BoardGame.objects.order_by('date_added')
