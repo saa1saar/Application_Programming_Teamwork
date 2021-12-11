@@ -6,10 +6,10 @@
 
 
 <ul>
-    {% for BoardGame in BoardGames %}
-    <li>{{ BoardGame }}</li>
+    {% for bg in bgs_h %}
+      <li>{{ bg }}</li>
     {% empty %}
-    <li>No board games have been added yet.</li>
+      <li>No board games have been added yet.</li>
     {% endfor %}
 </ul>
     
