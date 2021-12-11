@@ -6,11 +6,11 @@ def index(request):
     #Home page
     return render(request, 'board_game_app/index.html')
 
-def bgs_h(request):
+def bgsh(request):
     #BoardGames
-    bgs_h = BG.objects.order_by('date_added')
-    context = {'bgs_h': bgs_h}
-    return render(request, 'board_game_app/bgs_h.html', context)
+    bgsh = BG.objects.order_by('date_added')
+    context = {'bgsh': bgsh}
+    return render(request, 'board_game_app/bgsh.html', context)
 
 def bg(request, bg_id):
     #show a single bg and all its entries
