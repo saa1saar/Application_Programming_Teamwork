@@ -48,10 +48,10 @@ def new_review(request, boardgame_id):
         # POST data submitted; process data.
         form = ReviewGameForm(data=request.POST)
         if form.is_valid():
-           new_review = form.save(commit=False)
-           new_review.boardgame = boardgame
-           new_review.save()
-           return redirect('board_game_app:boardgame', boardgame_id=boardgame_id)
+            new_review = form.save(commit=False)
+            new_review.boardgame = boardgame
+            new_entry.save()
+            return redirect('board_game_app:boardgame', boardgame_id=boardgame_id)
     # Display a blank or invalid form.
     context = {'boardgame': boardgame, 'form': form}
     return render(request, 'board_game_app/new_review.html', context)
