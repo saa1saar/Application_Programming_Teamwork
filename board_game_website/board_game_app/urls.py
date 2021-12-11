@@ -9,5 +9,5 @@ urlpatterns = [
     #Homepage
     path('', views.index, name='index'),
     # Detail page for a single topic.
-    path('bgs_h/<int:bg_id>/', views.bg, name='bg')
+    path('bgsh/<int:bg_id>/', views.bg, name='bg')
 ]
