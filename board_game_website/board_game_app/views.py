@@ -15,9 +15,9 @@ def BoardGames(request):
 def boardgame(request, boardgame_id):
     #boardgame = topic
     boardgame = BoardGame.objects.get(id=boardgame_id)
-    #reviewgame = entries
-    ReviewGame = boardgame.entry_set.order_by('-date_added')
-    context = {'boardgame': boardgame,'review game': ReviewGame}
+    #availablegames = entries
+    AvailableGames = boardgame.entry_set.order_by('-date_added')
+    context = {'boardgame': boardgame,'available games': AvailableGames}
     return render(request, 'board_game_app/BoardGames.html', context)
 
 def new_boardgame(request):
