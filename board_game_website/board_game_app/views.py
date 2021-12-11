@@ -9,11 +9,11 @@ def BoardGames(request):
     #Home page
     return render(request, 'board_game_app/BoardGame.html', context)
 
-def boardgame(request, boardgame_id):
+def boardgame(request, boardgame_id)
     #boardgame = topic
-    boardgame = BoardGame.objects.get(id=boardgame_id)
+    boardgame = BoardGame.objects.get(id=topic_id)
     #available games = entries
-    availablegames = boardgame.entry_set.order_by('-date_added')
-    context = {'boardgame': boardgame,'available games': availablegames}
+    available games = topic.entry_set.order_by('-date_added')
+    context = {'boardgame': boardgame,'available games': available games}
     return render(request, 'board_game_app/BoardGames.html', context)
 # Create your views here.
