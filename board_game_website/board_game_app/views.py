@@ -1,12 +1,12 @@
 from django.shortcuts import render
 
+<<<<<<< HEAD
 from .models import Topic
 
 <<<<<<< HEAD
+=======
+>>>>>>> parent of 0c7026b (views.py Topics)
 def index(request):
-    #Topics
-    topics = Topic.objects.order_by('date_added')
-    context = {'topics': topics}
     #Home page
     return render(request, 'board_game_app/index.html')
 =======
