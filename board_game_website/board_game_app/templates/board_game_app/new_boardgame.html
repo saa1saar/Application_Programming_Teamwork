@@ -1,7 +1,7 @@
 {% extends "board_game_app/base.html" %}
 
 {% block content %}
-<p>Add a new board game:</p>
+<p>Add a new Board Game:</p>
 
  <form action="{% url 'board_game_app:new_boardgame' %}" method='post'>
    {% csrf_token %}
